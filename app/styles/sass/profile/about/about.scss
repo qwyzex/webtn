@@ -1,0 +1,65 @@
+body {
+    background: var(--dim), url('/images/background/abstract-10.jpg');
+    background-size: cover;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    > article {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        font-size: 1.2rem;
+
+        h3 {
+            width: max-content;
+        }
+
+        ul, ol {
+            li {
+                list-style: inside;
+            }
+        }
+
+        article {
+            p {
+                margin: 1.2rem;
+            }
+        }
+    }
+    #conclusion {
+        padding: 1rem;
+        margin-block-end: 2rem;
+        border-radius: .3em;
+
+        background: var(--color-background-semi-transparent);
+        transition: .3s ease;
+        
+        &:hover {
+            background: var(--color-background-medium-transparent);
+            backdrop-filter: var(--blur-medium);
+        }
+        
+        * {
+            width: max-content;
+        }
+
+        div {
+            ul, ol {
+                li {
+                    list-style: inside;
+                    padding-inline-start: 1rem;
+                }
+            }
+        }
+
+        .reference {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

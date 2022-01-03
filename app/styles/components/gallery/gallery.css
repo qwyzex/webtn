@@ -1,0 +1,99 @@
+body {
+  background: var(--dim), url("/images/background/abstract-7.jpg");
+  background-size: cover;
+}
+
+.app {
+  backdrop-filter: blur(4px);
+}
+
+.gallery-container {
+  padding-bottom: 3rem;
+}
+.gallery-container > h1 {
+  font-size: 200%;
+}
+.gallery-container div.projects > section {
+  display: flex;
+  overflow-y: visible !important;
+  overflow-x: auto;
+  padding-block: 1rem;
+}
+.gallery-container div.projects > section:hover .card {
+  filter: brightness(70%);
+}
+.gallery-container div.projects > section .card {
+  background: #f2f2f2;
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 25rem;
+  padding: 1rem;
+  color: var(--color-background);
+  border-radius: 0.6em;
+  box-shadow: -1rem 0 3rem #19172290;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.gallery-container div.projects > section .card:not(:first-child) {
+  margin-left: -80px;
+}
+.gallery-container div.projects > section .card:hover {
+  transform: translateY(-1rem);
+  filter: brightness(100%);
+}
+.gallery-container div.projects > section .card:hover ~ .card {
+  transform: translateX(80px);
+}
+.gallery-container div.projects > section .card p.desc {
+  font-weight: 600;
+}
+.gallery-container div.projects > section .card a.fill span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.gallery-container div.projects > section .card div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+  padding-inline-start: 5rem;
+  width: 100%;
+  background: #d6d6d6;
+}
+.gallery-container div.projects > section .card div a {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 10px;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  border: 3px solid #00000000;
+  transition: 0.2s ease;
+}
+.gallery-container div.projects > section .card div a:hover {
+  transform: translateY(-0.4rem);
+  background-color: #aaeb4a;
+  border: 3px solid yellowgreen;
+  text-decoration: none;
+}
+.gallery-container div.projects > section .card div a:active {
+  transform: translateY(-0.2rem);
+}
+.gallery-container div.projects > section .card div p {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=gallery.css.map */

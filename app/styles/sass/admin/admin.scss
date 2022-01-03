@@ -1,0 +1,17 @@
+.admin {
+    display: flex;
+
+    > nav {
+        padding-right: 2rem;
+    }
+
+    > main {
+        flex: 1;
+        border-left: solid 1px #ccc;
+        padding-left: 2rem;
+    }
+
+    em {
+        color: red;
+    }
+}

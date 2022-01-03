@@ -1,0 +1,49 @@
+body {
+  background: var(--dim), url("/images/background/abstract-10.jpg");
+  background-size: cover;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-container > article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+.about-container > article h3 {
+  width: max-content;
+}
+.about-container > article ul li, .about-container > article ol li {
+  list-style: inside;
+}
+.about-container > article article p {
+  margin: 1.2rem;
+}
+.about-container #conclusion {
+  padding: 1rem;
+  margin-block-end: 2rem;
+  border-radius: 0.3em;
+  background: var(--color-background-semi-transparent);
+  transition: 0.3s ease;
+}
+.about-container #conclusion:hover {
+  background: var(--color-background-medium-transparent);
+  backdrop-filter: var(--blur-medium);
+}
+.about-container #conclusion * {
+  width: max-content;
+}
+.about-container #conclusion div ul li, .about-container #conclusion div ol li {
+  list-style: inside;
+  padding-inline-start: 1rem;
+}
+.about-container #conclusion .reference {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,149 @@
+body {
+  background: var(--dim), url("/images/background/abstract-18.jpg");
+}
+
+.nav-items a.contact::before {
+  width: 100% !important;
+}
+
+@media (max-width: 65rem) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container #contact-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container #contact-form div.submit {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media (min-width: 65rem) {
+  .contact-container {
+    flex-direction: row;
+  }
+  .contact-container #contact-form {
+    width: 100%;
+  }
+  .contact-container #contact-form div {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+  }
+  .contact-container #contact-form div.submit {
+    display: flex;
+    gap: 1rem;
+    padding-inline-start: 8rem;
+  }
+}
+.contact-parrent {
+  padding: 3rem 0;
+  max-width: 95vw;
+}
+.contact-parrent .contact-container {
+  padding: 2rem;
+  background-color: var(--color-background-semi-transparent);
+  backdrop-filter: var(--blur-medium);
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+}
+.contact-parrent .contact-container .contact-info {
+  background-color: var(--accent);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: slideUp 3s forwards ease;
+}
+.contact-parrent .contact-container .contact-info ul.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-parrent .contact-container .contact-info ul.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.contact-parrent .contact-container .contact-info ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-parrent .contact-container .contact-info ul li img {
+  height: 20px;
+}
+.contact-parrent .contact-container #contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-parrent .contact-container #contact-form div input, .contact-parrent .contact-container #contact-form div textarea {
+  outline: none;
+  border: none;
+  padding: 0.4rem;
+  transition: 0.3s ease;
+  font-family: var(--font-body);
+}
+.contact-parrent .contact-container #contact-form div input:focus-within, .contact-parrent .contact-container #contact-form div textarea:focus-within {
+  outline: 2px solid #ccc;
+  border-radius: 0.1rem;
+}
+.contact-parrent .contact-container #contact-form div textarea {
+  min-height: 5rem;
+  max-height: 12rem;
+  resize: vertical;
+}
+.contact-parrent .contact-container #contact-form div.submit button {
+  border: none;
+  background: var(--accent);
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  transition: 0.4s ease;
+  outline: 2px solid #00000000;
+}
+.contact-parrent .contact-container #contact-form div.submit button:active {
+  outline: 2px solid var(--accent-light);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus {
+  visibility: hidden;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.show {
+  visibility: visible !important;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.status {
+  border-radius: 0;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.status.error {
+  background-color: var(--error);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.status.pending {
+  background-color: var(--pending);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.status.success {
+  background-color: var(--success);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

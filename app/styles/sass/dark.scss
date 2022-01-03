@@ -1,0 +1,20 @@
+:root {
+    --color-foreground: hsl(0, 0%, 100%);
+    --color-medium-fg: hsl(0, 0%, 76%);
+    --color-background: rgb(19, 18, 24);
+    --color-medium-ground: rgb(35, 34, 39);
+    --color-background-semi-transparent: rgb(4, 4, 4, .3);
+    --color-background-medium-transparent: rgb(4, 4, 4, .7);
+    --color-links: hsl(213, 100%, 73%);
+    --color-links-hover: hsl(213, 100%, 80%);
+    --color-components: hsl(0, 0, 88%);
+    --color-border: hsl(0, 0%, 65%);
+    --dim: 
+      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7));
+    --shadow: 0 8px 12px rgb(20, 20, 20, .7);
+  
+    /* unnessecary */
+    --invert-main-logo: invert(0%);
+    --invert-invert: invert(100%);
+}
+  

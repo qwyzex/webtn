@@ -1,0 +1,234 @@
+.terminal::before {
+  content: "~ $ ";
+}
+
+body {
+  background: var(--dim), url("/images/background/nebulana-large.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 60rem) {
+  .page.split {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .page #welcome {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 60rem) {
+  .page.split {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.page {
+  padding: 4em 1rem;
+}
+.page.landing {
+  min-height: calc(80vh - 4em);
+}
+.page #welcome * {
+  color: var(--color-foreground);
+  font-weight: 600;
+}
+.page #welcome .welcome-text {
+  padding-block-end: 10px;
+}
+.page #welcome .welcome-text *:nth-child(1) {
+  animation-name: slide-right-1;
+  animation-duration: 4s;
+}
+.page #welcome .welcome-text *:nth-child(2) {
+  animation-name: slide-right-2;
+  animation-duration: 4s;
+}
+.page #welcome .welcome-text *:nth-child(3) {
+  animation-name: slide-right-3;
+  animation-duration: 4s;
+}
+.page #welcome .learn-more-cont {
+  width: max-content;
+  animation-name: slide-right-4;
+  animation-duration: 4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.page #welcome .learn-more-cont #learn-more {
+  background-color: #00000000;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  color: var(--accent);
+  font-family: "Bergen Mono";
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.page #welcome .learn-more-cont #learn-more:hover {
+  color: white;
+  background-color: var(--accent);
+  border-top: 2px solid #ff668a;
+  border-left: 2px solid #ff668a;
+  border-right: 2px solid #990024;
+  border-bottom: 2px solid #990024;
+}
+.page #welcome .learn-more-cont #skills {
+  position: relative;
+  background-color: #00000000;
+  color: white;
+  padding: 0.6em 1em;
+  font-family: "Bergen Mono";
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+.page #welcome .learn-more-cont #skills::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: yellow;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+.page #welcome .learn-more-cont #skills:hover {
+  color: black;
+}
+.page #welcome .learn-more-cont #skills:hover::before {
+  height: 100%;
+}
+.page .picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-2rem);
+}
+.page .picture img {
+  height: 18rem;
+}
+.page .picture p {
+  transform: translateY(1rem);
+  background: var(--color-background-medium-transparent);
+  backdrop-filter: blur(0.3rem);
+  padding: 0.3rem 0.8rem;
+}
+
+/* don't open */
+@keyframes slide-right-1 {
+  0% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  20% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  100% {
+    z-index: -1;
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes slide-right-2 {
+  0% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  40% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  100% {
+    z-index: -1;
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes slide-right-3 {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes slide-right-4 {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
